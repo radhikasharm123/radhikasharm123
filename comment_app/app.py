@@ -5,7 +5,7 @@ sys.path.append(os.getcwd())
 from flask import Flask
 from flask_migrate import Migrate
 from shared.utils.db_utils import db
-from comment_app.routes.comment_routes import comment_bp  # Ensure you have this file
+from comment_app.routes.comment_routes import comment_bp 
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:radheybhai@localhost:3306/social_media_app_db'
@@ -21,4 +21,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)  # Use a different port for this app
+    app.run(debug=True, port=5001)  
